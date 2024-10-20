@@ -11,6 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById("raiz"));
 root.render(
     <React.StrictMode>
         <BarraDeNavegacion />
+        <div className="container">
         <RouterProvider router={rutas} />
+        </div>
     </React.StrictMode>
 );

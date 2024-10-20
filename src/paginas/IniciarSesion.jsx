@@ -1,6 +1,6 @@
 const IniciarSesion = () => {
     return <>
-        <div>Página de inicio de sesión</div>
+        <h1>Página de inicio de sesión</h1>
     </>
 }
 

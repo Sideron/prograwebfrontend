@@ -1,3 +1,4 @@
+import "./BarraDeNavegacion.css"
 const BarraDeNavegacion = () => {
     return <>
         <nav className="navbar navbar-expand-lg bg-primary">

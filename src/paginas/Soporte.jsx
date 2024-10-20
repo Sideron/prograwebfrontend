@@ -1,6 +1,6 @@
 const Soporte = () => {
     return <>
-        <div>Página de Soporte</div>
+        <h1>Página de Soporte</h1>
     </>
 }
 

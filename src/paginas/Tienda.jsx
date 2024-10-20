@@ -1,6 +1,6 @@
 const Tienda = () => {
     return <>
-        <p>Esta es la tienda</p>
+        <h1>Esta es la tienda</h1>
     </>
 }
 
