@@ -1,8 +1,6 @@
-import BarraDeNavegacion from "../componentes/BarraDeNavegacion"
-
 const Tienda = () => {
     return <>
-        <BarraDeNavegacion />
+        <p>Esta es la tienda</p>
     </>
 }
 
