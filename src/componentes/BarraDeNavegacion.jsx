@@ -1,8 +1,9 @@
-import "./BarraDeNavegacion.css"
+import "../estilos/BarraDeNavegacion.css"
+
 const BarraDeNavegacion = () => {
     return <>
-        <nav className="navbar navbar-expand-lg bg-primary">
-            <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid" id="div-contenedor">
                 {/* Logo de Steam */}
                 <a className="navbar-brand" href="/">
                     <img src="logo_steam.svg" alt="Enlace a la página Steam" width="176" height="44" />
@@ -20,10 +21,7 @@ const BarraDeNavegacion = () => {
                         <a className="nav-link" href="/comunidad">Comunidad</a>
                         <a className="nav-link" href="/acerca_de">Acerca de</a>
                         <a className="nav-link" href="/soporte">Soporte</a>
-                    </div>
-
-                    <div className="d-flex">
-                        <a className="nav-link me-3" href="/iniciar_sesion">Iniciar sesion</a>
+                        <a className="nav-link" href="/iniciar_sesion">Iniciar sesion</a>
                     </div>
                 </div>
             </div>

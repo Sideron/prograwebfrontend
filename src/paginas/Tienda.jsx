@@ -1,6 +1,6 @@
 const Tienda = () => {
     return <>
-        <h1>Esta es la tienda</h1>
+        <video src="video_promocional.mp4" autoPlay="true" loop="true" width={"100%"} height={"auto"}></video>
     </>
 }
 
