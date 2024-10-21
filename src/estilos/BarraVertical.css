@@ -1,0 +1,28 @@
+#imagen-tarjeta-regalo {
+    max-width: 85%;
+    margin-bottom: 6px;
+}
+
+#titulo-tarjeta-regalo {
+    color: rgb(136, 189, 233) !important;
+    margin: 0px !important;
+}
+
+#cuerpo-tarjeta-regalo {
+    color: rgb(164, 179, 196) !important;
+}
+
+.nav-titulo-vertical {
+    font-size: 14px;
+    font-weight: bolder;
+    color: rgb(83, 111, 134);
+    margin-top: 20px;
+    margin-bottom: 7px
+}
+
+.nav-enlace-vertical {
+    font-size: 12px;
+    font-weight: 550;
+    color: rgb(122, 139, 157);
+    margin-top: 2px 0
+}
