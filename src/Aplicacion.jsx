@@ -14,7 +14,7 @@ import Administracion from "./paginas/Administracion";
 
 
 const Aplicacion = () => {
-    const [sesionIniciada, setSesionIniciada] = useState(true)
+    const [sesionIniciada, setSesionIniciada] = useState(false)
 
     return <>
         <BarraDeNavegacion sesionIniciada = {sesionIniciada} />

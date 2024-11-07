@@ -1,0 +1,34 @@
+.container-fluid {
+    background-image: url("http://localhost:3000/fondo_pagina_ingreso.jpg");
+    height: 655px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+
+.form-label {
+    color: rgb(26, 159, 255);
+    font-weight: 500;
+}
+
+.form-control, .form-control:focus, .form-check-input {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 53, 60);
+}
+
+.form-check-label {
+    color: rgb(175, 175, 175);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, rgb(6, 191, 255), rgb(45, 115, 255));
+    width: 270px;
+}
+
+#contenedor_secundario1, #contenedor_secundario2 {
+    width: 769px;
+}
+
+#contenedor_secundario2 {
+    background-color: rgb(24, 26, 33);
+    border-radius: 4px;
+}

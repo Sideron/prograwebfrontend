@@ -26,7 +26,7 @@ const EnlacesDeBarraDeNavegacion = (propiedades) => {
                     :
                     <>
                         <Link className={"nav-link fs-6 fw-medium text-uppercase" + (enlaceSeleccionado === "ingreso" ? " active" : "")}
-                            to="/ingreso" onClick={() => {setEnlaceSeleccionado("perfil")}}>Iniciar sesión</Link>
+                            to="/ingreso" onClick={() => {setEnlaceSeleccionado("ingreso")}}>Iniciar sesión</Link>
                 
                         <Link className={"nav-link fs-6 fw-medium text-uppercase" + (enlaceSeleccionado === "registro" ? " active" : "")}
                             to="/registro" onClick={() => {setEnlaceSeleccionado("registro")}}>Registrarse</Link>
