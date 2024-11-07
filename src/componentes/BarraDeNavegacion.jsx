@@ -1,12 +1,8 @@
-import { useState } from "react"
-
 import EnlacesDeBarraDeNavegacion from "./EnlacesDeBarraDeNavegacion"
 
 import "../estilos/BarraDeNavegacion.css"
 
 const BarraDeNavegacion = () => {
-    const [enlaceSeleccionado, setEnlaceSeleccionado] = useState("")
-
     return <>
         <div className="d-flex justify-content-center bg-dark">
             <nav className="navbar navbar-expand-sm navbar-dark">
@@ -19,8 +15,7 @@ const BarraDeNavegacion = () => {
                     <img src="logo_steam.svg" alt="Logo de la página" width="176" height="44" />
                 </a>
 
-                <EnlacesDeBarraDeNavegacion enlaceSeleccionado = {enlaceSeleccionado}
-                        setEnlaceSeleccionado = {setEnlaceSeleccionado} />
+                <EnlacesDeBarraDeNavegacion />
             </nav>
         </div>
     </>
