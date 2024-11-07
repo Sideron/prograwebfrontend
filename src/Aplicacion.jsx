@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom"
 
-import BarraDeNavegacion from "./componentes/BarraDeNavegacion.jsx"
+import BarraDeNavegacion from "./componentes/BarraDeNavegacion";
+
 import Inicio from "./paginas/Inicio";
 import Tienda from "./paginas/Tienda";
 import Biblioteca from "./paginas/Biblioteca";
