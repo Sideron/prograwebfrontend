@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {Route, Routes} from "react-router-dom"
 
 import BarraDeNavegacion from "./componentes/BarraDeNavegacion";
@@ -13,16 +14,19 @@ import Administracion from "./paginas/Administracion";
 
 
 const Aplicacion = () => {
+    const [sesionIniciada, setSesionIniciada] = useState(true)
+
     return <>
-        <BarraDeNavegacion />
+        <BarraDeNavegacion sesionIniciada = {sesionIniciada} />
+
         <Routes>
             <Route path = "/" element = {<Inicio />} />
             <Route path = "/tienda" element = {<Tienda />} />
-            <Route path = "/biblioteca" element = {<Biblioteca />} />
             <Route path = "/comunidad" element = {<Comunidad />} />
-            <Route path = "/perfil" element = {<Perfil />} />
-            <Route path = "/registro" element = {<Registro />} />
             <Route path = "/ingreso" element = {<Ingreso />} />
+            <Route path = "/registro" element = {<Registro />} />
+            <Route path = "/perfil" element = {<Perfil />} />
+            <Route path = "/biblioteca" element = {<Biblioteca />} />
             <Route path = "/administracion" element = {<Administracion />} />
         </Routes>
     </>

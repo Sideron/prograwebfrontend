@@ -2,7 +2,7 @@ import EnlacesDeBarraDeNavegacion from "./EnlacesDeBarraDeNavegacion"
 
 import "../estilos/BarraDeNavegacion.css"
 
-const BarraDeNavegacion = () => {
+const BarraDeNavegacion = (propiedades) => {
     return <>
         <div className="d-flex justify-content-center bg-dark">
             <nav className="navbar navbar-expand-sm navbar-dark">
@@ -15,7 +15,7 @@ const BarraDeNavegacion = () => {
                     <img src="logo_steam.svg" alt="Logo de la página" width="176" height="44" />
                 </a>
 
-                <EnlacesDeBarraDeNavegacion />
+                <EnlacesDeBarraDeNavegacion sesionIniciada = {propiedades.sesionIniciada} />
             </nav>
         </div>
     </>
