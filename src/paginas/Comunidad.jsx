@@ -1,6 +1,6 @@
 const Comunidad = () => {
     return <>
-        <h1>Página de Comunidad</h1>
+        Página de comunidad
     </>
 }
 
