@@ -12,6 +12,7 @@ import Registro from "./paginas/Registro";
 import Ingreso from "./paginas/Ingreso";
 import Administracion from "./paginas/Administracion";
 
+import "./estilos/Aplicacion.css"
 
 const Aplicacion = () => {
     const [sesionIniciada, setSesionIniciada] = useState(false)

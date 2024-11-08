@@ -2,19 +2,19 @@ import "../estilos/Ingreso.css"
 
 const Ingreso = () => {
     return <>
-        <div className="container-fluid">
+        <div className="container-fluid" id="contenedor_principal_ingreso">
             <div className="row">
                 <div className="col-3"></div>
 
                 <div className="col-6">
-                    <div className="row" id="contenedor_secundario1">
+                    <div className="row" id="contenedor_secundario1_ingreso">
                         <div className="col-8 p-4">
                             <h3 className="fw-bolder text-center">Ingreso</h3>
                         </div>
                         <div className="col-4 p-4"></div>
                     </div>
 
-                    <div className="row" id="contenedor_secundario2">
+                    <div className="row" id="contenedor_secundario2_ingreso">
                         <div className="col-8 p-4">
                             <div className="mb-3 text-center">
                                 <label htmlFor="cuadro_texto_usuario" className="form-label">
