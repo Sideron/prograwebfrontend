@@ -16,6 +16,11 @@
     width: 270px;
 }
 
+.btn-danger {
+    background: linear-gradient(to right, rgb(245, 104, 22), rgb(194, 62, 62));
+    width: 270px;
+}
+
 .form-check-label {
     color: rgb(175, 175, 175);
 }

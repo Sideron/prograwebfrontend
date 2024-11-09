@@ -1,0 +1,22 @@
+.perfilDescripcion{
+    padding: 30px;
+    background: linear-gradient(0deg,rgb(28, 82, 184),30%, rgba(30, 34, 39,0));
+}
+.perfilIMG{
+    padding: 0;
+}
+
+.perfilIMG img{
+    width: 100%;
+}
+
+.reviewUsuario{
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+
+.reviewUsuario .estrellas{
+    float: right;
+    margin: 0px 10px;
+}
