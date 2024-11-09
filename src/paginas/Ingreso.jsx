@@ -1,6 +1,37 @@
+import { useState } from "react"
 import "../estilos/Ingreso.css"
+import { useNavigate } from "react-router-dom"
 
-const Ingreso = () => {
+const Ingreso = (props) => {
+    const navigate = useNavigate()
+
+    const [error, setError] = useState("")
+    const [name, setName] = useState("")
+    const [password, setPassword] = useState("")
+    const [show, setShow] = useState(false)
+
+    const cambiarNombre = (evt) => {
+        setName(evt.target.value)
+    }
+
+    const cambiarContra = (evt) => {
+        setPassword(evt.target.value)
+    }
+
+    const mostrarContra = (evt) => {
+        console.log(evt)
+        setShow(!show)
+    }
+
+    const inicioDeSesion = () => {
+        if(name === "user" && password === "password"){
+            setError("")
+            props.iniciarSesion(true)
+            navigate("/perfil")
+        }else{
+            setError("Usuario o contraseña invalido")
+        }
+    }
     return <>
         <div className="container-fluid" id="contenedor_principal_ingreso">
             <div className="row">
@@ -20,23 +51,23 @@ const Ingreso = () => {
                                 <label htmlFor="cuadro_texto_usuario" className="form-label">
                                     Usuario:
                                 </label>
-                                <input type="text" className="form-control" id="cuadro_texto_usuario" />
+                                <input type="text" className="form-control" value={name} onChange={cambiarNombre} id="cuadro_texto_usuario" />
                             </div>
 
                             <div className="mb-3 text-center">
                                 <label htmlFor="cuadro_texto_contrasenia" className="form-label">
                                     Contraseña:
                                 </label>
-                                <input type="password" className="form-control" id="cuadro_texto_contrasenia" />
+                                <input type={show?"text":"password"} className="form-control" value={password} onChange={cambiarContra} id="cuadro_texto_contrasenia" />
                             </div>
-
+                            {error===""?<></>:<div className="alert alert-danger p-1">{error}</div>}
                             <div className="mb-3 form-check d-flex justify-content-center">
-                                <input type="checkbox" className="form-check-input me-2" id="cuadro_verificacion_ver_contrasenia" />
+                                <input type="checkbox" checked={show} onChange={mostrarContra} className="form-check-input me-2" id="cuadro_verificacion_ver_contrasenia" />
                                 <label className="form-check-label" htmlFor="cuadro_verificacion_ver_contrasenia">Mostrar contraseña</label>
                             </div>
 
                             <div className="mb-3 text-center">
-                                <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                                <button type="submit" className="btn btn-primary" onClick={() => {inicioDeSesion()}}>Iniciar sesión</button>
                             </div>
                         </div>
 

@@ -24,8 +24,8 @@ const Aplicacion = () => {
             <Route path = "/" element = {<Inicio />} />
             <Route path = "/tienda" element = {<Tienda />} />
             <Route path = "/comunidad" element = {<Comunidad />} />
-            <Route path = "/ingreso" element = {<Ingreso />} />
-            <Route path = "/registro" element = {<Registro />} />
+            <Route path = "/ingreso" element = {<Ingreso iniciarSesion = {(x) => {setSesionIniciada(x)}} />} />
+            <Route path = "/registro" element = {<Registro iniciarSesion = {(x) => {setSesionIniciada(x)}}/>} />
             <Route path = "/perfil" element = {<Perfil />} />
             <Route path = "/biblioteca" element = {<Biblioteca />} />
             <Route path = "/administracion" element = {<Administracion />} />
