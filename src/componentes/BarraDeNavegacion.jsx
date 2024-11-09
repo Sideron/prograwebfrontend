@@ -5,6 +5,13 @@ import EnlacesDeBarraDeNavegacion from "./EnlacesDeBarraDeNavegacion"
 const BarraDeNavegacion = (propiedades) => {
     const [enlaceSeleccionado, setEnlaceSeleccionado] = useState("")
 
+    const listaDeEnlaces = [
+        {nombre : "Tienda", ruta : "/tienda", nombreAlterno : "Tienda", rutaAlterna : "/tienda"},
+        {nombre : "Comunidad", ruta : "/comunidad", nombreAlterno : "Comunidad", rutaAlterna : "/comunidad"},
+        {nombre : "Iniciar sesión", ruta : "/ingreso", nombreAlterno : "Perfil", rutaAlterna : "/perfil"},
+        {nombre : "Registrarse", ruta : "/registro", nombreAlterno : "Biblioteca", rutaAlterna : "/biblioteca"}
+    ]
+
     return <>
         <div className="d-flex justify-content-center" style={{backgroundColor : "rgb(23, 29, 37)"}}>
             <nav className="navbar navbar-expand-lg">
@@ -18,6 +25,7 @@ const BarraDeNavegacion = (propiedades) => {
                 </Link>
 
                 <EnlacesDeBarraDeNavegacion sesionIniciada = {propiedades.sesionIniciada}
+                                            listaDeEnlaces = {listaDeEnlaces}
                                             enlaceSeleccionado = {enlaceSeleccionado}
                                             setEnlaceSeleccionado = {setEnlaceSeleccionado} />
             </nav>
