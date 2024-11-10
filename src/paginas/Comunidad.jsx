@@ -54,8 +54,11 @@ const Comunidad = () => {
                     ))}
                 </div>
             </div>
+            <p>AAAAAAAAA</p>
         </div>
     );
 };
+
+
 
 export default Comunidad;
