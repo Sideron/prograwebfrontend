@@ -1,7 +1,6 @@
-import React from 'react';
-import '../estilos/Comunidad.css'; 
+import "../estilos/Footer.css"
 
-const Footer  = () => {
+export function Footer() {
     return <>
     <div id="footer" role="contentinfo" className="">
           <div className="footer_content">
@@ -77,7 +76,7 @@ const Footer  = () => {
               </div>
             </div>
 
-            <div></div>
+            <div style="clear: left"></div>
             <br />
 
             <div className="rule"></div>

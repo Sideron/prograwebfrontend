@@ -84,6 +84,7 @@ const Registro = (props) => {
                 <div className="col-3"></div>
             </div>
         </div>
+        <Footer/>
     </>
 }
 
