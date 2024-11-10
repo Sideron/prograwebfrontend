@@ -86,6 +86,10 @@ const Registro = (props) => {
                                 <input type={show?"text":"password"} className="form-control" value={password} onChange={cambiarContra} id="cuadro_texto_contrasenia" />
                             </div>
                             {error===""?<></>:<div className="alert alert-danger p-1">{error}</div>}
+                            <div className="mb-3 form-check d-flex justify-content-center">
+                                <input type="checkbox" checked={show} onChange={mostrarContra} className="form-check-input me-2" id="cuadro_verificacion_ver_contrasenia" />
+                                <label className="form-check-label" htmlFor="cuadro_verificacion_ver_contrasenia">Mostrar contraseña</label>
+                            </div>
 
                             <div className="mb-3 text-center">
                                 <button type="submit" className="btn btn-primary" onClick={() => {Registrar()}}>Registrarse</button>
