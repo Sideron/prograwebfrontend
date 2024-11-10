@@ -1,7 +1,7 @@
 import React from 'react';
 import '../estilos/Comunidad.css'; 
 
-export function Footer() {
+const Footer  = () => {
     return <>
     <div id="footer" role="contentinfo" className="">
           <div className="footer_content">
