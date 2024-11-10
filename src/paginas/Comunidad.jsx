@@ -54,7 +54,6 @@ const Comunidad = () => {
                     ))}
                 </div>
             </div>
-            <p>AAAAAAAAA</p>
         </div>
     );
 };
