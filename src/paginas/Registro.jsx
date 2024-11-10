@@ -9,6 +9,7 @@ const Registro = (props) => {
     const [error, setError] = useState("")
     const [email1, setCorreo1] = useState("")
     const [email2, setCorreo2] = useState("")
+    const [name, setName] = useState("")
     const [pais, setPais] = useState("")
     const [password, setPassword] = useState("")
     const [show, setShow] = useState(false)
@@ -19,6 +20,10 @@ const Registro = (props) => {
 
     const cambiarCorreo2 = (evt) => {
         setCorreo2(evt.target.value)
+    }
+
+    const cambiarNombre = (evt) => {
+        setName(evt.target.value)
     }
 
     const cambiarPais = (evt) => {
@@ -73,10 +78,10 @@ const Registro = (props) => {
                             </div>
 
                             <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_correo2" className="form-label">
-                                    Pais de Residencia:
+                                <label htmlFor="cuadro_texto_usuario" className="form-label">
+                                    Usuario:
                                 </label>
-                                <input type="text" className="form-control" value={pais} onChange={cambiarPais} id="cuadro_texto_correo2" />
+                                <input type="text" className="form-control" value={name} onChange={cambiarNombre} id="cuadro_texto_usuario" />
                             </div>
 
                             <div className="mb-3 text-center">
@@ -84,6 +89,13 @@ const Registro = (props) => {
                                     Crea una contraseña:
                                 </label>
                                 <input type={show?"text":"password"} className="form-control" value={password} onChange={cambiarContra} id="cuadro_texto_contrasenia" />
+                            </div>
+
+                            <div className="mb-3 text-center">
+                                <label htmlFor="cuadro_texto_correo2" className="form-label">
+                                    Pais de Residencia:
+                                </label>
+                                <input type="text" className="form-control" value={pais} onChange={cambiarPais} id="cuadro_texto_correo2" />
                             </div>
                             {error===""?<></>:<div className="alert alert-danger p-1">{error}</div>}
                             <div className="mb-3 form-check d-flex justify-content-center">
