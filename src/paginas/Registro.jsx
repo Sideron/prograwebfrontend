@@ -9,6 +9,7 @@ const Registro = (props) => {
     const [error, setError] = useState("")
     const [email1, setCorreo1] = useState("")
     const [email2, setCorreo2] = useState("")
+    const [pais, setPais] = useState("")
     const [password, setPassword] = useState("")
     const [show, setShow] = useState(false)
 
@@ -18,6 +19,10 @@ const Registro = (props) => {
 
     const cambiarCorreo2 = (evt) => {
         setCorreo2(evt.target.value)
+    }
+
+    const cambiarPais = (evt) => {
+        setPais(evt.target.value)
     }
 
     const cambiarContra = (evt) => {
@@ -71,7 +76,7 @@ const Registro = (props) => {
                                 <label htmlFor="cuadro_texto_correo2" className="form-label">
                                     Pais de Residencia:
                                 </label>
-                                <input type="text" className="form-control" value={email2} onChange={cambiarCorreo2} id="cuadro_texto_correo2" />
+                                <input type="text" className="form-control" value={pais} onChange={cambiarPais} id="cuadro_texto_correo2" />
                             </div>
 
                             <div className="mb-3 text-center">
