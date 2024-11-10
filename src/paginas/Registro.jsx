@@ -7,12 +7,17 @@ const Registro = (props) => {
     const navigate = useNavigate()
 
     const [error, setError] = useState("")
-    const [name, setName] = useState("")
+    const [email1, setCorreo1] = useState("")
+    const [email2, setCorreo2] = useState("")
     const [password, setPassword] = useState("")
     const [show, setShow] = useState(false)
 
-    const cambiarNombre = (evt) => {
-        setName(evt.target.value)
+    const cambiarCorreo1 = (evt) => {
+        setCorreo1(evt.target.value)
+    }
+
+    const cambiarCorreo2 = (evt) => {
+        setCorreo2(evt.target.value)
     }
 
     const cambiarContra = (evt) => {
@@ -49,17 +54,17 @@ const Registro = (props) => {
                     <div className="row" id="contenedor_secundario2_ingreso">
                         <div className="col-8 p-4">
                             <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_usuario" className="form-label">
+                                <label htmlFor="cuadro_texto_correo1" className="form-label">
                                     Ingresa tu Correo:
                                 </label>
-                                <input type="text" className="form-control" value={name} onChange={cambiarNombre} id="cuadro_texto_usuario" />
+                                <input type="text" className="form-control" value={email1} onChange={cambiarCorreo1} id="cuadro_texto_correo1" />
                             </div>
 
                             <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_usuario" className="form-label">
+                                <label htmlFor="cuadro_texto_correo2" className="form-label">
                                     Confima tu Correo:
                                 </label>
-                                <input type="text" className="form-control" value={name} onChange={cambiarNombre} id="cuadro_texto_usuario" />
+                                <input type="text" className="form-control" value={email2} onChange={cambiarCorreo2} id="cuadro_texto_correo2" />
                             </div>
 
                             <div className="mb-3 text-center">
@@ -84,7 +89,6 @@ const Registro = (props) => {
                 <div className="col-3"></div>
             </div>
         </div>
-        <Footer/>
     </>
 }
 
