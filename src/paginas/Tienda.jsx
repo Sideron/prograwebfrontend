@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import '../estilos/Tienda.css';
 
 const productos = [
-  { id: 1, nombre: "Cyberpunk 2077", precio: "$59.99", categoria: ["Acción", "RPG"], calificacion: 4, imagen: "/Cyberpunk 2077.png" },
-  { id: 2, nombre: "ELDEN RING", precio: "$69.99", categoria: ["Acción", "Aventura", "RPG"], calificacion: 5, imagen: "/ELDEN RING.png" },
-  { id: 3, nombre: "God of War", precio: "$49.99", categoria: ["Acción", "Aventura"], calificacion: 5, imagen: "/GOW.png" },
+  { id: 1, nombre: "Cyberpunk 2077", precio: 59.99, categoria: ["Acción", "RPG"], calificacion: 4, imagen: "/Cyberpunk 2077.png" },
+  { id: 2, nombre: "ELDEN RING", precio: 69.99, categoria: ["Acción", "Aventura", "RPG"], calificacion: 5, imagen: "/ELDEN RING.png" },
+  { id: 3, nombre: "God of War", precio: 49.99, categoria: ["Acción", "Aventura"], calificacion: 5, imagen: "/GOW.png" },
 ];
 
 const Tienda = () => {
@@ -19,6 +19,8 @@ const Tienda = () => {
     );
   };
 
+  const productosFiltrados = productos.filter((producto) => producto.precio <= filtroPrecio);
+
   return (
     <div className="tienda-container">
       <div className="sidebar">
@@ -28,7 +30,7 @@ const Tienda = () => {
           min="0"
           max="100"
           value={filtroPrecio}
-          onChange={(e) => setFiltroPrecio(e.target.value)}
+          onChange={(e) => setFiltroPrecio(Number(e.target.value))}
         />
         <p>${filtroPrecio}</p>
 
@@ -48,25 +50,29 @@ const Tienda = () => {
       </div>
 
       <div className="productos">
-        {productos.map((producto) => (
-          <div key={producto.id} className="producto-card">
-            <div className="producto-imagen">
-              <img src={producto.imagen} alt={producto.nombre} />
-            </div>
-            <div className="producto-detalles">
-              <h5>{producto.nombre}</h5>
-              <div className="producto-calificacion">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <span key={i} className={`star ${i < producto.calificacion ? "filled" : ""}`}>★</span>
-                ))}
+        {productosFiltrados.length > 0 ? (
+          productosFiltrados.map((producto) => (
+            <div key={producto.id} className="producto-card">
+              <div className="producto-imagen">
+                <img src={producto.imagen} alt={producto.nombre} />
               </div>
-              <p>{producto.categoria.join("  ")}</p>
+              <div className="producto-detalles">
+                <h5>{producto.nombre}</h5>
+                <div className="producto-calificacion">
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <span key={i} className={`star ${i < producto.calificacion ? "filled" : ""}`}>★</span>
+                  ))}
+                </div>
+                <p>{producto.categoria.join("  ")}</p>
+              </div>
+              <div className="producto-precio">
+                <h5>${producto.precio.toFixed(2)}</h5>
+              </div>
             </div>
-            <div className="producto-precio">
-              <h5>{producto.precio}</h5>
-            </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No hay productos disponibles para el precio seleccionado.</p>
+        )}
       </div>
     </div>
   );
