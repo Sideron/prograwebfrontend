@@ -68,15 +68,22 @@ const Registro = (props) => {
                             </div>
 
                             <div className="mb-3 text-center">
+                                <label htmlFor="cuadro_texto_correo2" className="form-label">
+                                    Pais de Residencia:
+                                </label>
+                                <input type="text" className="form-control" value={email2} onChange={cambiarCorreo2} id="cuadro_texto_correo2" />
+                            </div>
+
+                            <div className="mb-3 text-center">
                                 <label htmlFor="cuadro_texto_contrasenia" className="form-label">
-                                    País de Residencia:
+                                    Crea una contraseña:
                                 </label>
                                 <input type={show?"text":"password"} className="form-control" value={password} onChange={cambiarContra} id="cuadro_texto_contrasenia" />
                             </div>
                             {error===""?<></>:<div className="alert alert-danger p-1">{error}</div>}
 
                             <div className="mb-3 text-center">
-                                <button type="submit" className="btn btn-primary" onClick={() => {Registrar()}}>Iniciar sesión</button>
+                                <button type="submit" className="btn btn-primary" onClick={() => {Registrar()}}>Registrarse</button>
                             </div>
                         </div>
 
