@@ -1,0 +1,88 @@
+.tienda-container {
+    display: flex;
+    background-color: #1b2838;
+    color: #c7d5e0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #2a475e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .sidebar h4 {
+    color: #66c0f4;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar p {
+    color: #c7d5e0;
+  }
+  
+  .categorias div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .categorias label {
+    margin-left: 5px;
+  }
+  
+  .productos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .producto-card {
+    display: flex;
+    align-items: center;
+    background-color: #1b2838;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a475e;
+    transition: transform 0.2s;
+  }
+  
+  .producto-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .producto-imagen img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .producto-detalles {
+    flex: 1;
+  }
+  
+  .producto-detalles h5 {
+    font-size: 1.25rem;
+    color: #66c0f4;
+    margin: 0;
+  }
+  
+  .producto-calificacion .star {
+    font-size: 1.2rem;
+    color: #666;
+    margin-right: 3px;
+  }
+  
+  .producto-calificacion .star.filled {
+    color: #f39c12;
+  }
+  
+  .producto-precio h5 {
+    font-size: 1.5rem;
+    color: #66c0f4;
+  }
+  
