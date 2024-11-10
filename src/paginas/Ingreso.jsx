@@ -65,7 +65,9 @@ const Ingreso = (props) => {
                                 <input type="checkbox" checked={show} onChange={mostrarContra} className="form-check-input me-2" id="cuadro_verificacion_ver_contrasenia" />
                                 <label className="form-check-label" htmlFor="cuadro_verificacion_ver_contrasenia">Mostrar contraseña</label>
                             </div>
-
+                            <div className="mb-3 form-check d-flex justify-content-center">
+                                <a href="/registro">No tienes una cuenta?</a>
+                            </div>
                             <div className="mb-3 text-center">
                                 <button type="submit" className="btn btn-primary" onClick={() => {inicioDeSesion()}}>Iniciar sesión</button>
                             </div>

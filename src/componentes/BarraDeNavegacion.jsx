@@ -9,7 +9,7 @@ const BarraDeNavegacion = (propiedades) => {
         {nombre : "Tienda", ruta : "/tienda", nombreAlterno : "Tienda", rutaAlterna : "/tienda"},
         {nombre : "Comunidad", ruta : "/comunidad", nombreAlterno : "Comunidad", rutaAlterna : "/comunidad"},
         {nombre : "Iniciar sesión", ruta : "/ingreso", nombreAlterno : "Perfil", rutaAlterna : "/perfil"},
-        {nombre : "Registrarse", ruta : "/registro", nombreAlterno : "Biblioteca", rutaAlterna : "/biblioteca"}
+        {nombre : "", ruta : "#", nombreAlterno : "Biblioteca", rutaAlterna : "/biblioteca"}
     ]
 
     return <>
