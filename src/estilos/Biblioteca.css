@@ -1,0 +1,17 @@
+.main-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* espacio entre los componentes */
+  }
+  
+.library-section {
+    flex: 2;
+  }
+  
+.carrusel-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
