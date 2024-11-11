@@ -16,6 +16,7 @@ const productos = [
 const Tienda = () => {
   const [filtroPrecio, setFiltroPrecio] = useState(100);
   const [categoriasSeleccionadas, setCategoriasSeleccionadas] = useState([]);
+  const [carrito, setCarrito] = useState([]);
 
   const manejarCambioCategoria = (categoria) => {
     setCategoriasSeleccionadas((prev) =>
@@ -25,11 +26,16 @@ const Tienda = () => {
     );
   };
 
+  // Filtra productos por precio y categoría
   const productosFiltrados = productos.filter((producto) => 
     parseFloat(producto.precio.replace('S/.', '')) <= filtroPrecio &&
     (categoriasSeleccionadas.length === 0 || 
       producto.categoria.some((cat) => categoriasSeleccionadas.includes(cat)))
   );
+
+  const agregarAlCarrito = (producto) => {
+    setCarrito((prevCarrito) => [...prevCarrito, producto]);
+  };
 
   return (
     <div className="tienda-container">
@@ -74,6 +80,12 @@ const Tienda = () => {
             </div>
             <div className="producto-precio">
               <h5>{producto.precio}</h5>
+              <button 
+                className="agregar-carrito-btn" 
+                onClick={() => agregarAlCarrito(producto)}
+              >
+                Agregar al carrito
+              </button>
             </div>
           </div>
         ))}
