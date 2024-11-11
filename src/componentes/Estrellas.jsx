@@ -1,7 +1,10 @@
-import startH from "../imgs/star-hollow.png"
-import startF from "../imgs/star-filled.png"
-import "../estilos/Estrellas.css"
+import estrella_llena from "../imagenes/estrella_llena.png"
+import estrella_vacia from "../imagenes/estrella_vacia.png"
+
 import { useEffect, useState } from "react"
+
+import "../estilos/Estrellas.css"
+
 const Estrellas = (props) => {
     const [filled, setFilled] = useState(new Array(5).fill(0));
 
@@ -12,10 +15,11 @@ const Estrellas = (props) => {
         }
         setFilled(newFilled);
     }, [props.number]);
+    
     return <>
         {filled.map((x) => { 
-            return <img src={x===1?startF:startH} className="starIMG"/>}
-            )}
+            return <img src={x===1 ? estrella_llena : estrella_vacia} className="starIMG"/>}
+        )}
     </>
 }
 

@@ -1,6 +1,7 @@
 import { useState } from "react"
-import "../estilos/Ingreso.css"
 import { useNavigate } from "react-router-dom"
+
+import "../estilos/Ingreso.css"
 
 const Ingreso = (props) => {
     const navigate = useNavigate()
@@ -32,6 +33,7 @@ const Ingreso = (props) => {
             setError("Usuario o contraseña invalido")
         }
     }
+    
     return <>
         <div className="container-fluid" id="contenedor_principal_ingreso">
             <div className="row">
@@ -39,14 +41,13 @@ const Ingreso = (props) => {
 
                 <div className="col-6">
                     <div className="row" id="contenedor_secundario1_ingreso">
-                        <div className="col-8 p-4">
+                        <div className="p-4">
                             <h3 className="fw-bolder text-center">Ingreso</h3>
                         </div>
-                        <div className="col-4 p-4"></div>
                     </div>
 
                     <div className="row" id="contenedor_secundario2_ingreso">
-                        <div className="col-8 p-4">
+                        <div className="p-4">
                             <div className="mb-3 text-center">
                                 <label htmlFor="cuadro_texto_usuario" className="form-label">
                                     Usuario:
@@ -71,10 +72,6 @@ const Ingreso = (props) => {
                             <div className="mb-3 text-center">
                                 <button type="submit" className="btn btn-primary" onClick={() => {inicioDeSesion()}}>Iniciar sesión</button>
                             </div>
-                        </div>
-
-                        <div className="col-4 p-4" style={{alignContent : "center"}}>
-                            <img src="placeholder.png" alt="imagen temporal" width={"100%"}/>
                         </div>
                     </div>
                 </div>

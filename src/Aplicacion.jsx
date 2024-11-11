@@ -12,6 +12,8 @@ import Registro from "./paginas/Registro";
 import Ingreso from "./paginas/Ingreso";
 import Administracion from "./paginas/Administracion";
 
+import PieDePagina from "./componentes/PieDePagina";
+
 import "./estilos/Aplicacion.css"
 
 const Aplicacion = () => {
@@ -30,6 +32,8 @@ const Aplicacion = () => {
             <Route path = "/biblioteca" element = {<Biblioteca />} />
             <Route path = "/administracion" element = {<Administracion />} />
         </Routes>
+
+        <PieDePagina />
     </>
 }
 

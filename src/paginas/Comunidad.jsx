@@ -58,6 +58,4 @@ const Comunidad = () => {
     );
 };
 
-
-
 export default Comunidad;

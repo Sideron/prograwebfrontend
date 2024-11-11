@@ -1,6 +1,5 @@
 #contenedor_principal_ingreso {
     background-image: url("http://localhost:3000/fondo_pagina_ingreso.jpg");
-    height: 655px;
     padding-top: 80px;
     padding-bottom: 150px;
 }

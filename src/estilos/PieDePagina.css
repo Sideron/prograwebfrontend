@@ -1,0 +1,17 @@
+#contenedor_principal_pie_de_pagina {
+    background-color: rgb(23, 26, 33);
+    color: rgb(143, 152, 160);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 12px;
+}
+
+#fila1_pie_de_pagina, #fila4_pie_de_pagina {
+    border-top: 1px solid #363c44;
+}
+
+.enlace_pie_de_pagina {
+    color: rgb(198, 212, 223);
+    font-size: 13px;
+    margin-inline: 18px;
+}

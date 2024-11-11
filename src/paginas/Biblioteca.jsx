@@ -17,15 +17,15 @@ const Biblioteca = () => {
     ];
 
     return <>
-    <div className="main-container">
-        <div className="carrusel-section">
-            <Carrusel/>
+        <div className="main-container">
+            <div className="carrusel-section">
+                <Carrusel/>
+            </div>
+            <div className="library-section">
+                <GameLibr/>
+            </div>
         </div>
-        <div className="library-section">
-            <GameLibr/>
-        </div>
-    </div>
-        </>
+    </>
 }
 
 export default Biblioteca
