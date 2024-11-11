@@ -2,24 +2,20 @@ import React from "react";
 import "../estilos/GameLibr.css";
 
 const GameLibr = () => {
-  const games = [
-    { title: "Game A", genre: "Action", image: "gameA.jpg" },
-    { title: "Game B", genre: "Adventure", image: "gameB.jpg" },
-    { title: "Game C", genre: "RPG", image: "gameC.jpg" },
+  const featuredGames = [
+    { title: "Game 1", image: "image1.jpg" },
+    { title: "Game 2", image: "image2.jpg" },
+    { title: "Game 3", image: "image3.jpg" },
   ];
 
   return (
-    <div className="game-library">
-      <h2>Your Library</h2>
-      <div className="game-grid">
-        {games.map((game, index) => (
-          <div key={index} className="game-card">
-            <img src={game.image} alt={game.title} />
-            <h3>{game.title}</h3>
-            <p>{game.genre}</p>
-          </div>
-        ))}
-      </div>
+    <div className="carousel">
+      {featuredGames.map((game, index) => (
+        <div key={index} className="carousel-item">
+          <img src={game.image} alt={game.title} />
+          <h2>{game.title}</h2>
+        </div>
+      ))}
     </div>
   );
 };

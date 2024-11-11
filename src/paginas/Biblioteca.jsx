@@ -1,6 +1,6 @@
 import React from "react";
-import Carrusel from "../componentes/Carrusel"
 import GameLibr from "../componentes/GameLibr"
+import Carrusel from "../componentes/Carrusel"
 import "../estilos/Biblioteca.css"
 
 const Biblioteca = () => {
