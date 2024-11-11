@@ -18,10 +18,10 @@ const Biblioteca = () => {
 
     return <>
     <div className="main-container">
-        <div className="libray-section">
+        <div className="carrusel-section">
             <Carrusel/>
         </div>
-        <div className="libray-section">
+        <div className="library-section">
             <GameLibr/>
         </div>
     </div>

@@ -5,11 +5,11 @@
   }
   
 .library-section {
-    flex: 3; /* Ocupa más espacio */
+    flex: 2;
   }
   
-.carousel-section {
-    flex: 1; /* Ocupa menos espacio */
+.carrusel-section {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
