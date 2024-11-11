@@ -1,7 +1,13 @@
+import React from "react";
+import BarraDeNavegacion from "../componentes/BarraDeNavegacion"
+import Carrusel from "../componentes/Carrusel"
+import GameLibr from "../componentes/GameLibr"
+
 const Biblioteca = () => {
     return <>
-        Página de biblioteca
-    </>
+    <Carrusel/>
+    <GameLibr/>
+        </>
 }
 
 export default Biblioteca
