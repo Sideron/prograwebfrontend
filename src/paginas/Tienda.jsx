@@ -46,10 +46,10 @@ const Tienda = () => {
         <div className="container">
             <div className='row'>
             <div className="col-3">
-                
                 <h4>Menos de S/.{filtroPrecio}</h4>
                 <input type="range" min="0" max="300" value={filtroPrecio}
                     onChange={(e) => setFiltroPrecio(e.target.value)} />
+
 
                 <h4>Categoría</h4>
                 <div className="categorias">
