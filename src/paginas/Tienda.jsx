@@ -43,8 +43,10 @@ const Tienda = () => {
     };
 
     return <>
-        <div className="tienda-container">
-            <div className="sidebar">
+        <div className="container">
+            <div className='row'>
+            <div className="col-3">
+                
                 <h4>Menos de S/.{filtroPrecio}</h4>
                 <input type="range" min="0" max="300" value={filtroPrecio}
                     onChange={(e) => setFiltroPrecio(e.target.value)} />
@@ -62,7 +64,8 @@ const Tienda = () => {
                 </div>
             </div>
 
-            <div className="productos-grid">
+            <div className="col-9">
+                <div className='productos-grid'>
                 {productosFiltrados.map((producto) => (
                     <div key={producto.id} className="producto-card">
                         <img src={`${process.env.PUBLIC_URL}/${producto.imagen}`}
@@ -84,6 +87,8 @@ const Tienda = () => {
                         </div>
                     </div>
                 ))}
+                </div>
+            </div>
             </div>
         </div>
     </>
