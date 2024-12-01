@@ -72,7 +72,7 @@ const Tienda = () => {
                             alt={producto.nombre} className="producto-imagen" />
 
                         <div className="producto-detalles">
-                            <h5>{producto.nombre}</h5>
+                            <a href={`juego#${producto.id}`}>{producto.nombre}</a>
                             <div className="producto-calificacion">
                                 {"★".repeat(producto.calificacion)}{"☆".repeat(5 - producto.calificacion)}
                             </div>

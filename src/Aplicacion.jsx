@@ -15,6 +15,7 @@ import Administracion from "./paginas/Administracion";
 import PieDePagina from "./componentes/PieDePagina";
 
 import "./estilos/Aplicacion.css"
+import Juego from "./paginas/Juego";
 
 const Aplicacion = () => {
     const [sesionIniciada, setSesionIniciada] = useState(false)
@@ -25,6 +26,7 @@ const Aplicacion = () => {
         <Routes>
             <Route path = "/" element = {<Inicio />} />
             <Route path = "/tienda" element = {<Tienda />} />
+            <Route path = "/juego" element = {<Juego />} />
             <Route path = "/comunidad" element = {<Comunidad />} />
             <Route path = "/ingreso" element = {<Ingreso iniciarSesion = {(x) => {setSesionIniciada(x)}} />} />
             <Route path = "/registro" element = {<Registro iniciarSesion = {(x) => {setSesionIniciada(x)}}/>} />
