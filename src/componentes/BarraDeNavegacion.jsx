@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import logo_de_steam_navbar from "../imagenes/logo_de_steam_navbar.svg"
 import EnlacesDeBarraDeNavegacion from "./EnlacesDeBarraDeNavegacion"
 
 const BarraDeNavegacion = (propiedades) => {
@@ -21,7 +22,7 @@ const BarraDeNavegacion = (propiedades) => {
                 </button>
 
                 <Link className="navbar-brand mx-4" to="/" onClick={() => {setEnlaceSeleccionado("/")}}>
-                    <img src="logo_steam.svg" alt="Logo de la página" height="44" />
+                    <img src={logo_de_steam_navbar} alt="Logo de la página" height="44" />
                 </Link>
 
                 <EnlacesDeBarraDeNavegacion sesionIniciada = {propiedades.sesionIniciada}

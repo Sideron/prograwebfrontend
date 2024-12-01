@@ -1,0 +1,194 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Among Us",
+        "precio_actual" : 11.99,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
+        "generos" : [
+            {
+                "id": "3",
+                "nombre": "Casual"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "nombre" : "Call of Duty®: Black Ops III",
+        "precio_actual" : 217.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "2",
+                "nombre": "Aventura"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "nombre" : "Cyberpunk 2077",
+        "precio_actual" : 199.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg",
+        "generos" : [
+            {
+                "id": "5",
+                "nombre": "Rol"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "nombre" : "DRAGON BALL: Sparking! ZERO",
+        "precio_actual" : 207.50,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1790600/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "nombre" : "ELDEN RING",
+        "precio_actual" : 172.50,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "5",
+                "nombre": "Rol"
+            }
+        ]
+    },
+    {
+        "id" : 6,
+        "nombre" : "Goat Simulator",
+        "precio_actual" : 23.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265930/header.jpg",
+        "generos" : [
+            {
+                "id": "3",
+                "nombre": "Casual"
+            },
+            {
+                "id": "6",
+                "nombre": "Simuladores"
+            },
+            {
+                "id": "8",
+                "nombre": "Indie"
+            }
+        ]
+    },
+    {
+        "id" : 7,
+        "nombre" : "God of War",
+        "precio_actual" : 159.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "2",
+                "nombre": "Aventura"
+            },
+            {
+                "id": "5",
+                "nombre": "Rol"
+            }
+        ]
+    },
+    {
+        "id" : 8,
+        "nombre" : "Hades",
+        "precio_actual" : 53.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "5",
+                "nombre": "Rol"
+            },
+            {
+                "id": "8",
+                "nombre": "Indie"
+            }
+        ]
+    },
+    {
+        "id" : 9,
+        "nombre" : "Metro Exodus",
+        "precio_actual" : 75.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412020/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            }
+        ]
+    },
+    {
+        "id" : 10,
+        "nombre" : "Yu-Gi-Oh! Master Duel",
+        "precio_actual" : 0.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/header.jpg",
+        "generos" : [
+            {
+                "id": "4",
+                "nombre": "Estrategia"
+            },
+            {
+                "id": "6",
+                "nombre": "Simuladores"
+            },
+            {
+                "id": "7",
+                "nombre": "Free to Play"
+            }
+        ]
+    },
+    {
+        "id" : 11,
+        "nombre" : "Overwatch® 2",
+        "precio_actual" : 0.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "7",
+                "nombre": "Free to Play"
+            }
+        ]
+    },
+    {
+        "id" : 12,
+        "nombre" : "Counter-Strike 2",
+        "precio_actual" : 0.00,
+        "imagen_url" : "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg",
+        "generos" : [
+            {
+                "id": "1",
+                "nombre": "Acción"
+            },
+            {
+                "id": "7",
+                "nombre": "Free to Play"
+            }
+        ]
+    }
+]
