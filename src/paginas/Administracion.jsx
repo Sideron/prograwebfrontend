@@ -1,6 +1,9 @@
+import { useState } from "react";
+import "../estilos/Administracion.css"
+
 const Administracion = () => {
     return <>
-        Página de administración
+        Página de Administracion
     </>
 }
 

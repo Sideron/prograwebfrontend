@@ -9,7 +9,9 @@
                 "id": "3",
                 "nombre": "Casual"
             }
-        ]
+        ],
+        "descripcion" : "¡Un juego en línea y local para 4 a 15 personas que incluye trabajo en equipo y traición en el espacio!",
+        "desarrollador" : "Innersloth"
     },
     {
         "id" : 2,
@@ -25,7 +27,9 @@
                 "id": "2",
                 "nombre": "Aventura"
             }
-        ]
+        ],
+        "descripcion" : "Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.",
+        "desarrollador" : "Treyarch"
     },
     {
         "id" : 3,
@@ -37,7 +41,9 @@
                 "id": "5",
                 "nombre": "Rol"
             }
-        ]
+        ],
+        "descripcion" : "Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en el futuro sombrío de Night City, una peligrosa megalópolis obsesionada con el poder, el glamur y las incesantes modificaciones corporales.",
+        "desarrollador" : "CD PROJEKT RED"
     },
     {
         "id" : 4,
@@ -49,7 +55,9 @@
                 "id": "1",
                 "nombre": "Acción"
             }
-        ]
+        ],
+        "descripcion" : "DRAGON BALL: Sparking! ZERO toma el legendario estilo de juego de la saga Budokai Tenkaichi y lo lleva a niveles totalmente nuevos. ¡Domina el poder destructor de los guerreros más fuertes que han aparecido en Dragon Ball!",
+        "desarrollador" : "Spike Chunsoft Co., Ltd."
     },
     {
         "id" : 5,
@@ -65,7 +73,9 @@
                 "id": "5",
                 "nombre": "Rol"
             }
-        ]
+        ],
+        "descripcion" : "EL NUEVO RPG DE ACCIÓN DE FANTASÍA. Levántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.",
+        "desarrollador" : "FromSoftware, Inc."
     },
     {
         "id" : 6,
@@ -85,7 +95,9 @@
                 "id": "8",
                 "nombre": "Indie"
             }
-        ]
+        ],
+        "descripcion" : "Goat Simulator is the latest in high-tech Goat Simulation technology.",
+        "desarrollador" : "Coffee Stain Studios"
     },
     {
         "id" : 7,
@@ -105,7 +117,9 @@
                 "id": "5",
                 "nombre": "Rol"
             }
-        ]
+        ],
+        "descripcion" : "Habiendo consumado su venganza contra los dioses el Olimpo años atrás, Kratos ahora vive como un hombre en el reino de los dioses y los monstruos nórdicos. En este hostil e inhóspito mundo, debe pelear por sobrevivir... y enseñarle a su hijo a hacer lo mismo.",
+        "desarrollador" : "Santa Monica Studio"
     },
     {
         "id" : 8,
@@ -125,7 +139,9 @@
                 "id": "8",
                 "nombre": "Indie"
             }
-        ]
+        ],
+        "descripcion" : "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.",
+        "desarrollador" : "Supergiant Games"
     },
     {
         "id" : 9,
@@ -137,7 +153,9 @@
                 "id": "1",
                 "nombre": "Acción"
             }
-        ]
+        ],
+        "descripcion" : "Flee the shattered ruins of the Moscow Metro and embark on an epic, continent-spanning journey across the post-apocalyptic Russian wilderness. Explore vast, non-linear levels, lose yourself in an immersive, sandbox survival experience, and follow a thrilling story-line that spans an entire year in the greatest Metro adventure yet.",
+        "desarrollador" : "4A Games"
     },
     {
         "id" : 10,
@@ -157,7 +175,9 @@
                 "id": "7",
                 "nombre": "Free to Play"
             }
-        ]
+        ],
+        "descripcion" : "La edición digital definitiva del juego de cartas competitivo que ha estado evolucionando por más de 20 años! Reta Duelistas de alrededor del mundo, al máximo nivel.",
+        "desarrollador" : "KONAMI"
     },
     {
         "id" : 11,
@@ -173,7 +193,9 @@
                 "id": "7",
                 "nombre": "Free to Play"
             }
-        ]
+        ],
+        "descripcion" : "Overwatch® 2 es un juego de disparos por equipos, reconocido ampliamente por la crítica, que se desarrolla en un futuro optimista con una creciente alineación de héroes. Forma equipo con amigos y adéntrate hoy.",
+        "desarrollador" : "Blizzard Entertainment, Inc."
     },
     {
         "id" : 12,
@@ -189,6 +211,8 @@
                 "id": "7",
                 "nombre": "Free to Play"
             }
-        ]
+        ],
+        "descripcion" : "Durante más de dos décadas, Counter-Strike ha brindado una experiencia competitiva de élite, una experiencia moldeada por millones de jugadores en todo el mundo. Ahora es el momento de comenzar el siguiente capítulo en la historia de CS. Esto es Counter-Strike 2.",
+        "desarrollador" : "Valve"
     }
 ]
