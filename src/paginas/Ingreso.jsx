@@ -25,13 +25,6 @@ const Ingreso = (props) => {
     }
 
     const inicioDeSesion = async () => {
-        /*if(name === "user" && password === "password"){
-            setError("")
-            props.iniciarSesion(true)
-            navigate("/perfil")
-        }else{
-            setError("Usuario o contraseña invalido")
-        }*/
        try {
         const solicitud = await fetch('http://localhost:3001/usuarios',{
             method: 'POST',
@@ -42,7 +35,9 @@ const Ingreso = (props) => {
         })
         const logeo = await solicitud.json()
         if(logeo.error === undefined){
-            navigate(`/perfil/:${logeo.id}`)
+            setError("")
+            props.iniciarSesion(true)
+            navigate(`/perfil/${logeo.id}`)
         }else{
             setError(logeo.error)
         }

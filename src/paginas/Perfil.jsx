@@ -1,10 +1,28 @@
 import Estrellas from "../componentes/Estrellas"
-
+import { useParams } from "react-router-dom"
 import foto_de_perfil from "../imagenes/foto_de_perfil.jpg"
 
 import "../estilos/Perfil.css"
+import { useEffect, useState } from "react"
 
 const Perfil = () => {
+    const {id} = useParams()
+    const [nombreUsuario,setNombreUsuario] = useState('')
+    useEffect(() => {
+        const fetchUsuario = async () => {
+            try {
+                const miUsuario = await fetch(`http://localhost:3001/usuarios/${parseInt(id)}`,{
+                    method: 'GET'
+                })
+                const datosUser = await miUsuario.json()
+                setNombreUsuario(datosUser.nombre)
+            } catch (error) {
+                console.error('Error al obtener los datos del usuario:', error);
+            }
+            
+        }
+        fetchUsuario()
+    },[])
     return <>
         <div className="container">
             <div className="row">
@@ -14,7 +32,7 @@ const Perfil = () => {
                             <img src={foto_de_perfil}/>
                         </div>
                         <div className="col perfilDescripcion">
-                            <h1 className="ts-2">User</h1>
+                            <h1 className="ts-2">{nombreUsuario}</h1>
                             <p>usuario@gmail.com</p>
                         </div>
                     </div>
