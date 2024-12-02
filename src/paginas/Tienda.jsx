@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../estilos/Tienda.css';
 
 const productos = [
-    { id: 1, nombre: "Call of Duty Black Ops III", precio: "S/. 217.00", categoria: ["Acción", "Multijugador"], calificacion: 4, imagen: "Call of Duty Black Ops III.png" },
-    { id: 2, nombre: "Among Us", precio: "S/.11.59", categoria: ["Acción", "Multijugador"], calificacion: 3, imagen: "Among Us.png" },
-    { id: 3, nombre: "DRAGON BALL Sparking ZERO", precio: "S/.207.50", categoria: ["Acción", "Aventura", "Multijugador"], calificacion: 5, imagen: "DRAGON BALL Sparking ZERO.png" },
-    { id: 4, nombre: "Goat Simulator", precio: "S/.23.00", categoria: ["Acción", "Aventura"], calificacion: 4, imagen: "Goat Simulator.png" },
-    { id: 5, nombre: "HADES", precio: "S/.53.00", categoria: ["Acción", "RPG"], calificacion: 5, imagen: "HADES.png" },
-    { id: 6, nombre: "Metro Exodus", precio: "S/.75.00", categoria: ["Acción", "Aventura", "Terror"], calificacion: 4, imagen: "Metro Exodus.png" },
-    { id: 7, nombre: "Cyberpunk 2077", precio: "S/.199.00", categoria: ["Acción", "RPG"], calificacion: 4, imagen: "Cyberpunk 2077.png" },
-    { id: 8, nombre: "ELDEN RING", precio: "S/.172.50", categoria: ["Acción", "Aventura", "RPG"], calificacion: 5, imagen: "ELDEN RING.png" },
-    { id: 9, nombre: "God of War", precio: "S/.199.99", categoria: ["Acción", "Aventura"], calificacion: 5, imagen: "GOW.png" }
+    { id: 1, nombre: "Call of Duty Black Ops III", precio: "S/. 217.00", categorias: ["Acción", "Multijugador"], calificacion: 4, imagen: "Call of Duty Black Ops III.png" },
+    { id: 2, nombre: "Among Us", precio: "S/.11.59", categorias: ["Acción", "Multijugador"], calificacion: 3, imagen: "Among Us.png" },
+    { id: 3, nombre: "DRAGON BALL Sparking ZERO", precio: "S/.207.50", categorias: ["Acción", "Aventura", "Multijugador"], calificacion: 5, imagen: "DRAGON BALL Sparking ZERO.png" },
+    { id: 4, nombre: "Goat Simulator", precio: "S/.23.00", categorias: ["Acción", "Aventura"], calificacion: 4, imagen: "Goat Simulator.png" },
+    { id: 5, nombre: "HADES", precio: "S/.53.00", categorias: ["Acción", "RPG"], calificacion: 5, imagen: "HADES.png" },
+    { id: 6, nombre: "Metro Exodus", precio: "S/.75.00", categorias: ["Acción", "Aventura", "Terror"], calificacion: 4, imagen: "Metro Exodus.png" },
+    { id: 7, nombre: "Cyberpunk 2077", precio: "S/.199.00", categorias: ["Acción", "RPG"], calificacion: 4, imagen: "Cyberpunk 2077.png" },
+    { id: 8, nombre: "ELDEN RING", precio: "S/.172.50", categorias: ["Acción", "Aventura", "RPG"], calificacion: 5, imagen: "ELDEN RING.png" },
+    { id: 9, nombre: "God of War", precio: "S/.199.99", categorias: ["Acción", "Aventura"], calificacion: 5, imagen: "GOW.png" }
 ];
 
 const Tienda = () => {
     const [filtroPrecio, setFiltroPrecio] = useState(100);
     const [categoriasSeleccionadas, setCategoriasSeleccionadas] = useState([]);
     const [carrito, setCarrito] = useState([]);
+    /*const [productos, setProductos] = useState([])*/
 
     const manejarCambioCategoria = (categoria) => {
         setCategoriasSeleccionadas((prev) =>
@@ -26,13 +27,35 @@ const Tienda = () => {
         );
     };
 
+    /*useEffect(() => {
+        const fetchearJuegos = async () => {
+            try {
+                const fprod = await fetch('http://localhost:3001/juegos',{
+                    method: 'GET'
+                })
+                const result = await fprod.json()
+                setProductos(result)
+                console.log(result)
+            } catch (error) {
+                console.log(error)
+            }
+            
+        }
+        fetchearJuegos()
+    }, [])
+
+    useEffect(() => {
+        console.log(productos);
+    }, [productos]);*/
+
+
     // Filtra productos por precio y categoría
     const productosFiltrados = productos.filter((producto) => {
         return (parseFloat(producto.precio.replace('S/.', '')) <= filtroPrecio)
                     && 
                     (categoriasSeleccionadas.length === 0 
                         || 
-                        producto.categoria.some((cat) => {
+                        producto.categorias.some((cat) => {
                             return categoriasSeleccionadas.includes(cat)
                         })
                     )
@@ -68,15 +91,15 @@ const Tienda = () => {
                 <div className='productos-grid'>
                 {productosFiltrados.map((producto) => (
                     <div key={producto.id} className="producto-card">
-                        <img src={`${process.env.PUBLIC_URL}/${producto.imagen}`}
+                        <img src={`${process.env.PUBLIC_URL}/${producto.imagen_url}`}
                             alt={producto.nombre} className="producto-imagen" />
 
                         <div className="producto-detalles">
                             <a href={`juego#${producto.id}`}>{producto.nombre}</a>
-                            <div className="producto-calificacion">
+                            {/*<div className="producto-calificacion">
                                 {"★".repeat(producto.calificacion)}{"☆".repeat(5 - producto.calificacion)}
-                            </div>
-                            <p>{producto.categoria.join("  ")}</p>
+                            </div>*/}
+                            <p>{producto.categorias.join("  ")}</p>
                         </div>
 
                         <div className="producto-precio">
