@@ -38,7 +38,7 @@ const Registro = (props) => {
 
     const enviarRegistro = async (nom, contra) => {
         try {
-            const solicitud = await fetch('http://localhost:3001/cliente',{
+            const solicitud = await fetch('http://localhost:3001/clientes',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
