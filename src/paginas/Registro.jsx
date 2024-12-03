@@ -5,31 +5,21 @@ const Registro = (props) => {
     const navigate = useNavigate()
 
     const [error, setError] = useState("")
-    const [email1, setCorreo1] = useState("")
-    const [email2, setCorreo2] = useState("")
     const [name, setName] = useState("")
-    const [pais, setPais] = useState("")
     const [password, setPassword] = useState("")
+    const [password2, setPassword2] = useState("")
     const [show, setShow] = useState(false)
-
-    const cambiarCorreo1 = (evt) => {
-        setCorreo1(evt.target.value)
-    }
-
-    const cambiarCorreo2 = (evt) => {
-        setCorreo2(evt.target.value)
-    }
 
     const cambiarNombre = (evt) => {
         setName(evt.target.value)
     }
 
-    const cambiarPais = (evt) => {
-        setPais(evt.target.value)
-    }
-
     const cambiarContra = (evt) => {
         setPassword(evt.target.value)
+    }
+
+    const cambiarContra2 = (evt) => {
+        setPassword2(evt.target.value)
     }
 
     const mostrarContra = (evt) => {
@@ -38,12 +28,33 @@ const Registro = (props) => {
     }
 
     const Registrar = () => {
-        if(name === "user" && password === "password"){
+        if(password === password2){
             setError("")
-            props.iniciarSesion(true)
-            navigate("/perfil")
+            enviarRegistro(name,password)
         }else{
             setError("Usuario o contraseña invalido")
+        }
+    }
+
+    const enviarRegistro = async (nom, contra) => {
+        try {
+            const solicitud = await fetch('http://localhost:3001/cliente',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ usuario: nom, contrasenia: contra })
+            })
+            const logeo = await solicitud.json()
+            if(logeo.error === ""){
+                setError("")
+                navigate('/ingreso')
+            }else{
+                setError(logeo.error)
+            }
+                console.log(logeo)
+        } catch (error) {
+            console.log(error)
         }
     }
 
@@ -61,19 +72,6 @@ const Registro = (props) => {
 
                     <div className="row" id="contenedor_secundario2_ingreso">
                         <div className="p-4">
-                            <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_correo1" className="form-label">
-                                    Ingresa tu Correo:
-                                </label>
-                                <input type="text" className="form-control" value={email1} onChange={cambiarCorreo1} id="cuadro_texto_correo1" />
-                            </div>
-
-                            <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_correo2" className="form-label">
-                                    Confima tu Correo:
-                                </label>
-                                <input type="text" className="form-control" value={email2} onChange={cambiarCorreo2} id="cuadro_texto_correo2" />
-                            </div>
 
                             <div className="mb-3 text-center">
                                 <label htmlFor="cuadro_texto_usuario" className="form-label">
@@ -90,10 +88,10 @@ const Registro = (props) => {
                             </div>
 
                             <div className="mb-3 text-center">
-                                <label htmlFor="cuadro_texto_correo2" className="form-label">
-                                    Pais de Residencia:
+                                <label htmlFor="cuadro_texto_contrasenia" className="form-label">
+                                    Confirma la contraseña:
                                 </label>
-                                <input type="text" className="form-control" value={pais} onChange={cambiarPais} id="cuadro_texto_correo2" />
+                                <input type={show?"text":"password"} className="form-control" value={password2} onChange={cambiarContra2} id="cuadro_texto_contrasenia" />
                             </div>
 
                             {error === ""
