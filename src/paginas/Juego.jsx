@@ -31,8 +31,8 @@ const Juego = () => {
                     <div className="details">
                         <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1608230/header.jpg?t=1731334666"/>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis esse consectetur similique unde harum maxime laboriosam hic consequuntur enim omnis nulla neque, accusantium expedita!</p>
-                        <p className="devName">Developer: Wishfully</p>
-                        <p>Tags</p>
+                        <p className="devName"><b>Developer:</b> Wishfully</p>
+                        <p><b>Tags:</b></p>
                         <div className="tags">
                             <a href="#">Action</a><a href="#">Puzzle</a>
                         </div>
