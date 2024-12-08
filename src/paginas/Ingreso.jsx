@@ -37,7 +37,8 @@ const Ingreso = (props) => {
         if(logeo.error === undefined){
             setError("")
             props.iniciarSesion(true)
-            navigate(`/perfil/${logeo.id}`)
+            sessionStorage.setItem('userToken',logeo.id)
+            navigate(`/perfil`)
         }else{
             setError(logeo.error)
         }

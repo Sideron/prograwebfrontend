@@ -1,0 +1,31 @@
+.details{
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.details img{
+    width: 100%;
+}
+
+.details p{
+    padding: 2px 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.tags{
+    padding: 12px 10px;
+}
+
+.tags a{
+    color: #a5d1fa;
+    margin: 0px 4px;
+    background-color: rgb(53, 68, 83);
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.tags a:hover{
+    background-color: rgb(73, 118, 163);
+}

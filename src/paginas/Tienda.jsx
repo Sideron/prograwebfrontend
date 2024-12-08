@@ -97,7 +97,7 @@ const Tienda = () => {
                             alt={producto.nombre} className="producto-imagen" />
 
                         <div className="producto-detalles">
-                            <a href={`juego#${producto.id}`}>{producto.nombre}</a>
+                            <a href={`juego/${producto.id}`}>{producto.nombre}</a>
                             {/*<div className="producto-calificacion">
                                 {"★".repeat(producto.calificacion)}{"☆".repeat(5 - producto.calificacion)}
                             </div>*/}

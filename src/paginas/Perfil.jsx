@@ -1,21 +1,28 @@
 import Estrellas from "../componentes/Estrellas"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import foto_de_perfil from "../imagenes/foto_de_perfil.jpg"
 
 import "../estilos/Perfil.css"
 import { useEffect, useState } from "react"
 
-const Perfil = () => {
-    const {id} = useParams()
+const Perfil = (props) => {
+    const navigate = useNavigate()
+
+    //const {id} = useParams()
+    const id = sessionStorage.getItem('userToken')
     const [nombreUsuario,setNombreUsuario] = useState('')
     useEffect(() => {
         const fetchUsuario = async () => {
             try {
-                const miUsuario = await fetch(`http://localhost:3001/usuarios/${parseInt(id)}`,{
-                    method: 'GET'
-                })
-                const datosUser = await miUsuario.json()
-                setNombreUsuario(datosUser.nombre)
+                if (id!=NaN){
+                    const miUsuario = await fetch(`http://localhost:3001/usuarios/${parseInt(id)}`,{
+                        method: 'GET'
+                    })
+                    const datosUser = await miUsuario.json()
+                    setNombreUsuario(datosUser.nombre)
+                }else{
+                    navigate('/ingreso')
+                }
             } catch (error) {
                 console.error('Error al obtener los datos del usuario:', error);
             }
@@ -23,6 +30,13 @@ const Perfil = () => {
         }
         fetchUsuario()
     },[])
+
+    const endSession = () => {
+        sessionStorage.removeItem('userToken')
+        props.iniciarSesion(false)
+        navigate('/ingreso')
+    }
+
     return <>
         <div className="container">
             <div className="row">
@@ -71,7 +85,7 @@ const Perfil = () => {
                 <div className="col-4">
                     <h4>Opciones</h4>
                     <button className="btn btn-primary">Añadir</button>
-                    <button className="btn btn-danger">Reportar</button>
+                    <button className="btn btn-danger" onClick={endSession}>Logout</button>
                 </div>
             </div>
         </div>
