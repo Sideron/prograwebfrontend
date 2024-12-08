@@ -32,7 +32,9 @@ const Aplicacion = () => {
         <Routes>
             <Route path = "/" element = {<Inicio />} />
             <Route path = "/tienda" element = {<Tienda />} />
-            <Route path = "/juego/:id" element = {<Juego />} />
+            <Route path = "/tienda/:genre" element = {<Tienda />} />
+            <Route path = "juego/:id" element = {<Juego />} />
+            <Route path = "tienda/juego/:id" element = {<Juego />} />
             <Route path = "/comunidad" element = {<Comunidad />} />
             <Route path = "/ingreso" element = {<Ingreso iniciarSesion = {(x) => {setSesionIniciada(x)}} />} />
             <Route path = "/registro" element = {<Registro iniciarSesion = {(x) => {setSesionIniciada(x)}}/>} />

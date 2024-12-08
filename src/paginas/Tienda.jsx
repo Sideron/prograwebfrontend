@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../estilos/Tienda.css';
+import { useParams } from 'react-router-dom';
 
 /*const productos = [
     { id: 1, nombre: "Call of Duty Black Ops III", precio: "S/. 217.00", categorias: ["Acción", "Multijugador"], calificacion: 4, imagen: "https://store-images.s-microsoft.com/image/apps.552.66777443557046310.abf0f423-a960-4f91-982f-7c0e898cf325.a2d1f0d5-3fa3-4494-a092-dab2e95ec3ee?q=90&w=177&h=265" },
@@ -14,6 +15,7 @@ import '../estilos/Tienda.css';
 ];*/
 
 const Tienda = () => {
+    const {genre} = useParams()
     const [filtroPrecio, setFiltroPrecio] = useState(100);
     const [categoriasSeleccionadas, setCategoriasSeleccionadas] = useState([]);
     const [carrito, setCarrito] = useState([]);
@@ -27,6 +29,10 @@ const Tienda = () => {
         );
     };
 
+    const asignarProductos = (lst) => {
+        setProductos(lst)
+    }
+
     useEffect(() => {
         const fetchearJuegos = async () => {
             try {
@@ -34,14 +40,16 @@ const Tienda = () => {
                     method: 'GET'
                 })
                 const result = await fprod.json()
-                result.forEach(element => {
-                    productos.push(element)
-                });
+                asignarProductos(result)
                 console.log(productos)
             } catch (error) {
                 console.log(error)
             }
             
+        }
+        console.log(genre)
+        if(genre!== undefined){
+            manejarCambioCategoria(genre)
         }
         fetchearJuegos()
     }, [])
